@@ -38,9 +38,10 @@ programming help solve these problems?
 
 
 7- What is abstraction?
-    Abstraction is the practice of confining repeating, assumed logic to
-    methods so that the implementation not only requires less code but is more
-    maintainable.
+    Abstraction is the practice of confining logic responsible for the
+    behavior inside the methods so that the implementation not only yields
+    less code and is more maintainable, but also so the underlying logic is
+    hidden from the implementation.
 
 
 8- What is coupling?
@@ -56,8 +57,9 @@ programming help solve these problems?
 
 
 10- What are constructors?
-    Constructors allow arguments to be passed when creating an instance of an
-    object so that they do not need to be set after the instantiation.
+    Constructors are sort of like methods and they are called when we used the
+    new keyword upon instantiation of an object. When the constructor is
+    called, it initializes the state of that instance.
 
 
 11- What is method overloading?
