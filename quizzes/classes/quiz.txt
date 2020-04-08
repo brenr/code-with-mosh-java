@@ -1,0 +1,71 @@
+Questions
+
+1- What is the difference between a class and an object?
+    A class is essentially the blueprint for creating objects. An object is an
+    instance of the class.
+
+
+2- What does instantiating mean?
+    When we instantiate something, it simply means we are creating an instance
+    of a class.
+
+
+3- What is the difference between stack and heap memory? How are they managed?
+    In the JVM, the stack refers to the the container which holds both
+    primitives and references to objects. The heap contains the actual object
+    data. Under the hood, when the garbage collector assesses which objects no
+    longer need to be referenced. It deallocates the memory space to allow it
+    to be overwritten by future allocations.
+
+
+4- What are the problems of procedural code? How does object-oriented
+programming help solve these problems?
+    The issue with procedural code is that you're having to pass multiple
+    parameters which is generally bad practice for code maintainability. The
+    goal is to pass a single object instead, which the fields can be derived
+    from.
+
+
+5- What is encapsulation?
+    Encapsulation is the practice of containing multiple fields and methods
+    within a class so that the instances' state and behavior are within an
+    object.
+
+
+6- Why should we declare fields as private?
+    The reason why we would declare fields or methods as private is to confine
+    the internal functionality within the scope of the class.
+
+
+7- What is abstraction?
+    Abstraction is the practice of confining repeating, assumed logic to
+    methods so that the implementation not only requires less code but is more
+    maintainable.
+
+
+8- What is coupling?
+    Coupling describes the amount of mutual dependency from one class to
+    another. While coupling is unavoidable in object-oriented programming,
+    it is best practice to keep it to a minimal.
+
+
+9- How does the abstraction principle help reduce coupling?
+    Abstraction helps reduce coupling by containing repeating, assumed logic
+    within methods so that the implementation requires less logic. It's
+    essentially a form of keep the code "dry".
+
+
+10- What are constructors?
+    Constructors allow arguments to be passed when creating an instance of an
+    object so that they do not need to be set after the instantiation.
+
+
+11- What is method overloading?
+    Method overloading is when we define methods with the same name but with
+    a different set of parameters which allows for more flexibility in the
+    implementation.
+
+
+12- What are static methods?
+    Static methods are bound to the class and not the instance, so it does not
+    require instantiation of a class to access the method.
