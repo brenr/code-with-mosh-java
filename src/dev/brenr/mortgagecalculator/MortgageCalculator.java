@@ -1,4 +1,4 @@
-package dev.brenr;
+package dev.brenr.mortgagecalculator;
 
 public class MortgageCalculator {
 
@@ -9,9 +9,9 @@ public class MortgageCalculator {
     }
 
     public double calculateMortgage() {
-        final double onePlusRatePowN = Math.pow(1 + loan.getRate(), loan.getPeriod());
+        final double onePlusRatePowN = Math.pow(1 + loan.getMonthlyRate(), loan.getPeriod());
         return loan.getPrincipal() *
-                ((loan.getRate() * onePlusRatePowN)
+                ((loan.getMonthlyRate() * onePlusRatePowN)
                 / (onePlusRatePowN - 1));
     }
 
@@ -22,11 +22,11 @@ public class MortgageCalculator {
     }
 
     private double getPrincipalInterest() {
-        return Math.pow(1 + loan.getRate(), loan.getPeriod());
+        return Math.pow(1 + loan.getMonthlyRate(), loan.getPeriod());
     }
 
     private double getPaidInterest() {
-        return Math.pow(1 + loan.getRate(), loan.getPaymentsMade());
+        return Math.pow(1 + loan.getMonthlyRate(), loan.getPaymentsMade());
     }
 
     public double[] getPaymentSchedule() {
