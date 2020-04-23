@@ -1,0 +1,13 @@
+Core pillars of OOP
+    Encapsulation
+    Abstraction
+    Inheritance
+    Polymorphism
+
+Abstract classes are for when we wouldn't instantiate an instance of it as it's abstract by nature.
+
+Final classes are for when we are 1,000% sure another class will never extend it (very rarely used).
+
+Avoid creating deep inheritance hierarchies.
+
+Java creators have decided to restrict inheritance to a single class to remove potential added complexity and ambiguity.

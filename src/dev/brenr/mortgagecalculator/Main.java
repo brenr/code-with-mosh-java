@@ -1,8 +1,5 @@
-package dev.brenr;
+package dev.brenr.mortgagecalculator;
 
-import dev.brenr.mortgagecalculator.Loan;
-import dev.brenr.mortgagecalculator.MortgageCalculator;
-import dev.brenr.mortgagecalculator.MortgageReport;
 import dev.brenr.util.Console;
 
 public class Main {

@@ -1,0 +1,111 @@
+Questions
+
+1- How can we have ClassA inherit from ClassB?
+    a) class ClassA inherits ClassB
+    *b) class ClassA extends ClassB
+    c) class ClassA : ClassB
+    d) class ClassA implements ClassB
+
+
+2- What will be printed on the console and why?
+            var point1 = new Point(1, 2);
+            var point2 = new Point(1, 2);
+            System.out.println(point1.equals(point2));
+    By default, the console will return false. The reason is because the .equals() method
+    which is derived from the base Object class compares the references in memory. If the
+    .equals() method is overridden with the @Override annotation, we can choose how we wish
+    for this method to handle what we deem to be equality.
+
+
+3- What does hashCode() method of the Object class return?
+    The .hashCode() method returns an integer based on the object's memory address.
+
+
+4- What is a default constructor?
+    The default constructor acts as the main point of entry when we create an instance of
+    an object and follows the format of `public ClassName() {}`.
+
+
+5- How can we add a constructor to the Customer class?
+    *a) public Customer(String name) { }
+    b) public void Customer(String name) {}
+    c) public Constructor(String name) {}
+    d) public void Constructor(String name) {}
+
+
+6- What is the super keyword?
+    The super keyword refers to the base class.
+
+
+7- What is the difference between private and protected access modifiers?
+    Access modifiers determine the visibility of members of a class. Private members are
+    restricted to the class so they're hidden from other classes. Protected is somewhat
+    similar to private in that protected members are visible to other members within the
+    same package but private outside of the package.
+
+
+8- How accessible is a field or method if it’s declared without an access modifier?
+    By default, if a field or method is declared without an access modifier, it's visible
+    to other classes within the same package.
+
+
+9- What is method overriding? How is it different from method overloading?
+    Method overriding is when we override the logic for a method with the same signature from
+    its base class. However, with method overloading, we are simply defining a method with the
+    same name but a different signature, or the set of parameters so that we can use a different
+    implementation.
+
+
+10- What is the benefit of applying the @Override annotation when overriding a method?
+    The @Override annotation simply lets the java compiler know that we are overriding the
+    method of the base class. Also useful for syntax linting to ensure the method return type
+    and signature is the same as the parent class.
+
+
+11- The Customer class inherits from the User class. Can we pass a Customer object to this method? Why?
+            public void print(User user) {}
+    Since a Customer IS a User, if we pass in a Customer object to the print method, the print
+    method signature is implicitly upcasting it to a User. If we need to access members of the
+    Customer, we can use the instanceof operator to ensure the program does not crash when we
+    execute logic that only applies to the Customer class.
+
+
+12- What is the usage of the instanceof operator?
+    We use the instanceof operator to return a boolean whether or not the left side of the
+    operator, the object we are evaluating, is an instance of the class literal on the right side.
+
+
+13- What are the four principles of object-oriented programming?
+    In object-oriented programming, the for core principles are...
+        1) Encapsulation, the idea of literally encapsulating any related members to the class
+        2) Abstraction, handling the logic and hiding internal members within the class
+        3) Inheritance, the concept of deriving from a parent class that encompasses
+            commonality between its other sibling classes.
+        4) Polymorphism, idea that a reference can be an instance of multiple class types.
+
+
+14- When do we use abstract classes?
+    We use abstract classes when the class shouldn't be instantiated as the concept of
+    the class is too abstract.
+
+
+15- Can we have an abstract class without any abstract methods?
+    Yes, an abstract class does not necessarily need to contain abstract methods. If
+    any of the classes are abstract, then the entire class has to be abstract however.
+
+
+16- When do we use final classes?
+    Final classes are used when we are completely certain that another class will never
+    inherit it.
+
+
+17- What is the diamond problem?
+    The diamond problem is the concept where one class inherits from more than one class
+    and you have methods in the super classes that have the same name and signature, the
+    inheriting class would not be able to determine which implementation to use. It is
+    ambiguous and it is a fundamental decision made to the Java language by its creators.
+
+
+18- Does Java support multiple inheritance?
+    No, as illustrated in the diamond problem, it was an issue that was avoided when
+    the Java language was conceptualized.
