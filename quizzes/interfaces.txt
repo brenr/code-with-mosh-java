@@ -1,0 +1,64 @@
+1- Why do we use interfaces?
+    Interfaces are used so that we can decrease the amount of coupling amongst classes. It
+    does so by not caring about any of the logic and letting the classes that implement it
+    decide how the logic should happen. So if we need to change the logic in a method, we
+    can change it for that one class and leave the rest of the code unaffected.
+
+
+2- What is tightly-coupled code?
+    Tightly coupled code describes the nature of several classes being highly dependent on
+    one another which is terrible if we need to make changes down the road so the code
+    ends up being less maintainable.
+
+
+3- Is this code loosely or tightly coupled and why?
+        public interface TaxCalculator {}
+        public class TaxCalculator2018 implements TaxCalculator {}
+        public class TaxReport {
+            private TaxCalculator calculator;
+            public TaxReport() {
+                calculator = new TaxCalculator2018();
+            }
+        }
+    This code is more considered tightly coupled because TaxReport should not be responsible
+    for instantiating the 2018 variant of the TaxCalculator. If we used dependency injection
+    to pass in the TaxCalculator we have used in the implementation, then TaxReport wouldn't
+    need to be changed as long as the TaxCalculator that gets passed conforms to the
+    TaxCalculator interface.
+
+
+4- What is dependency injection?
+    Dependency injection is the idea of passing references to constructors, getters and
+    as they are only responsible for mutating the state and behavior and not the instantiation.
+
+
+5- What are the various types of dependency injection?
+    Dependency injection is done in three main ways, two of which are more common than the
+    other. The first two are passing references into either constructors or methods, while
+    less often are passed into setters.
+
+
+6- What is the Interface Segregation Principle (ISP)?
+    The Interface Segregation Principle describes the idea that we should divide interfaces
+    into smaller ones so that the responsibilities are kept to a minimum.
+
+
+7- Why shouldn’t we declare fields, static or private methods in interfaces?
+    Interfaces should not be responsible or care about any logic. It simply lays out what
+    classes that implement them, can all do in common.
+
+
+8- What are the similarities and differences between interfaces and abstract classes?
+    Both interfaces and abstract classes for one cannot be instantiated, but also they are
+    responsible for handling the commonality amongst classes. They differ in that abstract
+    classes handle logic and aren't exactly a complete class but rather an root class where
+    subclasses that share similar logic will extend it. Interfaces are not designed for
+    the handling of logic but rather to implement what it is exactly that the classes that
+    implement it will share.
+
+
+9- Should we extract an interface from every class? Why?
+    Although it's good practice, not in every case. We'd only want to extract interfaces
+    where we would consider another implementation to occur in the future. Doing so increases
+    the extensibility of the program so if we need to later implement a different variant of
+    a class, it is a trivial change.

@@ -1,0 +1,19 @@
+
+Interfaces are for what should be done where classes are how they should be done.
+
+Dependency Injection:
+    - Classes should not instantiate their dependencies. The TaxReport class should not be
+      responsible for creating an instance of TaxCalculator but rather use it. We keep the
+      responsibilities separate.
+    - Dependency injection describes the idea of passing references of classes to the
+      constructors, setters, and methods rather than creating an instance inside. A class'
+      responsibility is to modify the state and behavior of objects its passed and shouldn't
+      care about creating objects.
+
+Try to keep the amount of methods in interfaces small.
+
+Interface Segregation Principle:
+    - We should divide big interfaces into smaller ones
+
+In Java, classes cannot have multiple parents but interfaces can. Interfaces can extend multiple
+where classes cannot. Classes however can implement as many interfaces we need.
