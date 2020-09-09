@@ -1,4 +1,4 @@
-# code-wish-mosh-java
+# Code With Mosh Java Series
 Repository containing all [Code With Mosh](https://www.codewithmosh.com) curriculum work of the Java series.
 
 ### Series
